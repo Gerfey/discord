@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  grando-espada.discord:
+    build:
+      context: ./docker/php
+    container_name: grando-espada.discord
+    restart: always
+    ports:
+      - "9201:80"
+    volumes:
+      - "./:/grando-espada.discord"
+    networks:
+      - grando-espada.network
+
+networks:
+  grando-espada.network:
+
